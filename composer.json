@@ -1,0 +1,20 @@
+{
+    "name": "hexlet/code",
+            "bin": [
+                "bin/gendiff"
+        ],
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikolai Malchikov",
+            "email": "malchikov.ne@gmail.com"
+        }
+    ],
+        "description": "hexlet php-package",
+        "license":  "MIT",
+        "require": {}
+}
