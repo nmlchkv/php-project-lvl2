@@ -1,12 +1,13 @@
 {
     "name": "hexlet/code",
             "bin": [
-                "bin/gendiff"
+                "bin/gendiff",
+                "bin/test"
         ],
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+        "autoload": {
+        "files": [
+                "src/1.php"
+        ]
     },
     "authors": [
         {
@@ -16,5 +17,7 @@
     ],
         "description": "hexlet php-package",
         "license":  "MIT",
-        "require": {}
+        "require": {
+        "docopt/docopt": "^1.0"
+    }
 }
