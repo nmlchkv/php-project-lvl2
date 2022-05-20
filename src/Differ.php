@@ -3,10 +3,10 @@
 namespace Src\genDiff;
 
 
-function сompare ()
+function сompare ($json1, $json2)
 {
-    $json1 = json_decode(file_get_contents('1.json'), true);
-    $json2 = json_decode(file_get_contents('2.json'), true);
+    $json1 = json_decode(file_get_contents('file1.json'), true);
+    $json2 = json_decode(file_get_contents('file2.json'), true);
     $result = [];
     $result2 = [];
     foreach ($json1 as $key => $value) {
@@ -20,7 +20,6 @@ function сompare ()
         $result['- ' . $key ] = $value;
         
       }
-     
     }
     foreach ($json2 as $key => $value) {
       if (array_key_exists($key, $json1) && $value === $json1[$key]) {
@@ -30,8 +29,7 @@ function сompare ()
       } if (!array_key_exists($key, $json1)) {
         $result2['+ ' . $key ] = $value;
       } 
-     
     } 
     $merge = (array_merge($result, $result2));
-    var_dump (($merge));
+    return ($merge);
 }

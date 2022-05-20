@@ -1,5 +1,9 @@
 #!/usr/bin/env php
 <?php
+
+use function Src\Differ\genDiff;
+
+
 $doc = <<<DOC
 Generate diff
 
@@ -8,14 +12,19 @@ Usage:
   gendiff (-v|--version)
   gendiff [--format <fmt>] <firstFile> <secondFile>
 
-Options:
+  Options:
   -h --help                     Show this screen
   -v --version                  Show version
   --format <fmt>                Report format [default: stylish]
+
 
 DOC;
 
 require('/home/php-project-lvl2-1/vendor/docopt/docopt/src/docopt.php');
 $args = Docopt::handle($doc, array('version'=>'Naval Fate 2.0'));
-foreach ($args as $k=>$v)
+
+foreach ($args as $k => $v)
     echo $k.': '.json_encode($v).PHP_EOL;
+    
+    $diff = (genDiff($pathToFile1, $pathToFile2));
+    print_r($diff);
