@@ -6,7 +6,8 @@
         ],
         "autoload": {
         "files": [
-                "src/1.php"
+                "src/file1.php",
+                "src/file2.php"
         ]
     },
     "authors": [
