@@ -1,12 +1,11 @@
 <?php
 
-namespace Src\genDiff;
+namespace src\Differ;
 
-
-function сompare ($json1, $json2)
+function genDiff($firstFile, $secondFile)
 {
-    $json1 = json_decode(file_get_contents('file1.json'), true);
-    $json2 = json_decode(file_get_contents('file2.json'), true);
+    $json1 = json_decode(file_get_contents($firstFile), true);
+    $json2 = json_decode(file_get_contents($secondFile), true);
     $result = [];
     $result2 = [];
     foreach ($json1 as $key => $value) {
