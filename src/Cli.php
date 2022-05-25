@@ -1,10 +1,10 @@
 <?php
 
-namespace src\Cli;
+namespace Src\Cli;
 
 use Docopt;
 
-use function src\Differ\genDiff;
+use function src\differ\genDiff;
 
 function start()
 {
