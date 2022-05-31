@@ -23,13 +23,18 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           # Specify the PHP version
-          php-version: '7.4'
+        php-version: '7.4'
       - name: Install
         # Install project
         run: make install
       - name: Run linter
         # Run Linter
         run: make lint
+      - name: Run linter-fix
+        run: make lint-fix
         # Publish code coverage on Code Climate
         # https://github.com/paambaati/codeclimate-action
         # Add Code Climate secret key
+        with:
+        coverageCommand: make test-coverage
+        coverageLocations: build/logs/clover.xml:clover
