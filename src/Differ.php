@@ -2,7 +2,7 @@
 
 namespace Src\Differ;
 
-function genDiff($firstFile, $secondFile)
+function genDiff($firstFile, $secondFile): string
 {
     $json1 = json_decode(file_get_contents($firstFile), true);
     $json2 = json_decode(file_get_contents($secondFile), true);
