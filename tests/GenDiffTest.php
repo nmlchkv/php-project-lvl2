@@ -30,6 +30,11 @@ class GenDiffTest extends TestCase
                 "file1.json",
                 "file2.json",
                 "resultTrueJson.txt"
+            ],
+            [
+                "file1.yaml",
+                "file2.yaml",
+                "resultTrueYaml.txt"
             ]
         ];
     }

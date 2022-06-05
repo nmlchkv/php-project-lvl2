@@ -21,10 +21,12 @@
     ],
         "description": "hexlet php-package",
         "license":  "MIT",
-        "require": {
+    "require": {
         "docopt/docopt": "^1.0",
         "lstrojny/functional-php": "^1.17",
-        "wp-cli/php-cli-tools": "^0.11.13"
+        "wp-cli/php-cli-tools": "^0.11.13",
+        "symfony/yaml": "^5.4",
+        "symfony/console": "^6.0"
     },
         "require-dev" : {
         "phpunit/phpunit": "^9.5",
