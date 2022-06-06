@@ -4,7 +4,7 @@ namespace Src\Cli;
 
 use Docopt;
 
-use function src\differ\genDiff;
+use function Src\Differ\genDiff;
 
 function start(): string
 {
@@ -26,6 +26,7 @@ function start(): string
 
     $firstFile = $args['<firstFile>'];
     $secondFile = $args['<secondFile>'];
+    $format = $args['--format'];
 
-    return genDiff($firstFile, $secondFile);
+    return genDiff($firstFile, $secondFile, $format);
 }
