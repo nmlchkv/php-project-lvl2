@@ -9,7 +9,7 @@ use function Src\Formatters\Json\format as formatJson;
 /**
  * @param array<mixed> $ast
  * @param string $format
- * @return array<mixed>
+ * @return string
  */
 function format(array $ast, string $format): string
 {

@@ -2,59 +2,44 @@
 
 namespace Src\Differ;
 
-function genDiff($firstFile, $secondFile): string
+use function Src\Parsers\parse;
+use function Src\Formatters\format;
+use function Src\Ast\ast;
+
+/**
+ * @param string $firstFile
+ * @param string $secondFile
+ * @param string $format
+ * @return string
+ */
+function genDiff(string $firstFile, string $secondFile, string $format = 'stylish'): string
 {
-    $json1 = json_decode(file_get_contents($firstFile), true);
-    $json2 = json_decode(file_get_contents($secondFile), true);
-    $result = [];
-    $result2 = [];
-    $result3 = [];
-    $result4 = [];
-    foreach ($json1 as $key => $value) {
-        if (is_bool($value)) {
-            $value = $value ? 'true' : 'false';
-        } if (array_key_exists($key, $json2) && $value === $json2[$key]) {
-            $result[$key] = $value;
-        } if (array_key_exists($key, $json2) && $value !== $json2[$key]) {
-            $result[$key] = $value;
-        } if (!array_key_exists($key, $json2)) {
-            $result[$key ] = $value;
-        }
+    $firstContent = getContent($firstFile);
+    $secondContent = getContent($secondFile);
+    $ast = ast($firstContent, $secondContent);
+    return format($ast, $format);
+}
+
+/**
+ * @param string $file
+ * @return array<string>
+ */
+function getContent(string $file): array
+{
+    $filePath = getPath($file);
+    $fileContent = file_get_contents($filePath);
+    $fileType = pathinfo($filePath, PATHINFO_EXTENSION);
+    return parse($fileType, $fileContent);
+}
+
+/**
+ * @param string $file
+ * @return string
+ */
+function getPath(string $file): string
+{
+    if (strpos($file, '/') === 0) {
+        return $file;
     }
-    foreach ($json2 as $key => $value) {
-        if (is_bool($value)) {
-            $value = $value ? 'true' : 'false';
-        } if (array_key_exists($key, $json1) && $value === $json1[$key]) {
-            $result2[$key] = $value;
-        } if (array_key_exists($key, $json1) && $value !== $json1[$key]) {
-            $result2[$key] = $value;
-        } if (!array_key_exists($key, $json1)) {
-            $result2[$key] = $value;
-        }
-    }
-      ksort($result);
-      ksort($result2);
-    foreach ($result as $key => $value) {
-        if (is_bool($value)) {
-            $value = $value ? 'true' : 'false';
-        } if (array_key_exists($key, $json2) && $value === $json2[$key]) {
-            $result3[$key] = $value;
-        } if (array_key_exists($key, $json2) && $value !== $json2[$key]) {
-            $result3['- ' . $key] = $value;
-        } if (!array_key_exists($key, $json2)) {
-            $result3['- ' . $key ] = $value;
-        }
-    }
-    foreach ($result2 as $key => $value) {
-        if (is_bool($value)) {
-            $value = $value ? 'true' : 'false';
-        } if (array_key_exists($key, $json1) && $value !== $json1[$key]) {
-            $result4['+ ' . $key] = $value;
-        } if (!array_key_exists($key, $json1)) {
-            $result4['+ ' . $key] = $value;
-        }
-    }
-      $merge = (array_merge($result3, $result4));
-      $jsonNew = (json_encode($merge));
-    return ($jsonNew);
+    return __DIR__ . '/../' . $file;
 }
