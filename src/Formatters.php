@@ -6,6 +6,11 @@ use function Src\Formatters\Plain\format as formatPlain;
 use function Src\Formatters\Stylish\format as formatStylish;
 use function Src\Formatters\Json\format as formatJson;
 
+/**
+ * @param array<mixed> $ast
+ * @param string $format
+ * @return array<mixed>
+ */
 function format(array $ast, string $format): string
 {
     switch ($format) {
