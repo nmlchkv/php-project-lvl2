@@ -7,3 +7,5 @@
 
 [![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
 [![yaml](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ.svg)](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ)
+
+<script id="asciicast-MgnGRyUDuZKbO9njhfNBPE9o1" src="https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.js" async></script>
