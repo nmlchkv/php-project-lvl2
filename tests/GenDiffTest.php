@@ -13,8 +13,8 @@ class GenDiffTest extends TestCase
      *
      * @param string $file1
      * @param string $file2
+     * @param string $format
      * @param string $result
-     * @param string $stylish
      * @return void
      */
     public function testGendiff($file1, $file2, $format, $result)
@@ -30,16 +30,6 @@ class GenDiffTest extends TestCase
     public function diffDataProvider()
     {
         return [
-            [
-                "file1.json",
-                "file2.json",
-                "resultTrueFlatten.txt"
-            ],
-            [
-                "file1.yaml",
-                "file2.yaml",
-                "resultTrueFlatten.txt"
-            ],
             [
                 "filepath1.json",
                 "filepath2.json",

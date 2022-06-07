@@ -2,6 +2,8 @@
 
 namespace Src\Differ;
 
+use Exception;
+
 use function Src\Parsers\parse;
 use function Src\Formatters\format;
 use function Src\Ast\ast;
@@ -28,6 +30,9 @@ function getContent(string $file): array
 {
     $filePath = getPath($file);
     $fileContent = file_get_contents($filePath);
+    if ($fileContent === false) {
+        throw new Exception("Cant read file");
+    }
     $fileType = pathinfo($filePath, PATHINFO_EXTENSION);
     return parse($fileType, $fileContent);
 }
