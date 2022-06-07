@@ -5,4 +5,5 @@
 [![PHP CI](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml/badge.svg)](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml)
 
 
-[![Json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
+[![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
+[![yaml](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ.svg)](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ)
