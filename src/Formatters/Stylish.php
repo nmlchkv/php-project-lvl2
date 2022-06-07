@@ -17,6 +17,7 @@ const SPACE = " ";
 const START = "{\n";
 const END = "}";
 
+
 /**
  * @param array<mixed> $ast
  * @return string
