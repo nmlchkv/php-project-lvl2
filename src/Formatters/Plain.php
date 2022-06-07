@@ -1,14 +1,14 @@
 <?php
 
-namespace Differ\Formatters\Plain;
+namespace Src\Formatters\Plain;
 
 use Exception;
 
-use function Differ\BuildAst\getType;
-use function Differ\BuildAst\getKey;
-use function Differ\BuildAst\getValue;
-use function Differ\BuildAst\getChildren;
-use function Differ\BuildAst\getSecondValue;
+use function Src\Ast\getType;
+use function Src\Ast\getKey;
+use function Src\Ast\getValue;
+use function Src\Ast\getChildren;
+use function Src\Ast\getSecondValue;
 
 /**
  * @param array<mixed> $ast
