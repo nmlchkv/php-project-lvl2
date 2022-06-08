@@ -7,6 +7,7 @@
  - git clone git@github.com:itaopro/php-project-lvl1.git
  - make install
  - start gendiff -h
+ 
 example flatten json
 [![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
 example flatten yaml
