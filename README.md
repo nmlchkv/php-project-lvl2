@@ -7,5 +7,6 @@
 
 [![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
 [![yaml](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ.svg)](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ)
+[![recursive](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG.svg)](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG)
 
 
