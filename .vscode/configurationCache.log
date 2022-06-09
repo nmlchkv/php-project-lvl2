@@ -1,1 +1,1 @@
-{"buildTargets":["install","lint","lint-fix","test","test-coverage","validate"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["gendiff","install","lint","lint-fix","test","test-coverage","validate"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

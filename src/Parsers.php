@@ -20,6 +20,6 @@ function parse(string $type, string $content): array
         case "json":
             return json_decode($content, true);
         default:
-            throw new Exception('Use can only type: .json, .yaml');
+            throw new Exception('Use can only type: .json, .yaml .yml');
     }
 }

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  8 10:22:24 2022
+# Make data base, printed on Thu Jun  9 10:52:40 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/rem
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-8730f9b5-8f08-486c-a1aa-49f92d2aca15.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7caeea7b-4791-43d0-a60f-5efc5831e323.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -110,7 +110,6 @@ MFLAGS = -pqrR
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
- 
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # default
@@ -133,6 +132,7 @@ SUFFIXES :=
 LANG = C
 # environment
 TERM = xterm-256color
+ 
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
@@ -167,13 +167,13 @@ test-coverage:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 17):
 	composer exec --verbose phpunit tests -- --coverage-clover ./build/logs/clover.xml
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 12:25:01.6539191
+#  Last modified 2022-06-08 15:44:51.888656
 #  File has been updated.
 #  Successfully updated.
 
@@ -181,14 +181,14 @@ validate:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 19):
+#  recipe to execute (from 'Makefile', line 20):
 	composer validate
 
 test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 13):
+#  recipe to execute (from 'Makefile', line 14):
 	composer exec --verbose phpunit tests
 
 # Not a target:
@@ -201,7 +201,7 @@ lint:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
+#  recipe to execute (from 'Makefile', line 7):
 	composer exec --verbose phpcs -- --standard=PSR12 src tests
 	composer exec --verbose phpstan -- --level=8 analyse src tests
 
@@ -209,8 +209,15 @@ lint-fix:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 10):
+#  recipe to execute (from 'Makefile', line 11):
 	composer exec --verbose phpcbf -- --standard=PSR12 src tests
+
+gendiff:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	./bin/gendiff -h
 
 install:
 #  Implicit rule search has not been done.
@@ -220,20 +227,20 @@ install:
 	composer install
 
 # files hash-table stats:
-# Load=10/1024=1%, Rehash=0, Collisions=0/20=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/21=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 210 B / avg = 8 B
-# current buf: size = 8162 B / used = 210 B / count = 25 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 26 / storage = 218 B / avg = 8 B
+# current buf: size = 8162 B / used = 218 B / count = 26 / avg = 8 B
 
-# strcache performance: lookups = 35 / hit rate = 28%
+# strcache performance: lookups = 37 / hit rate = 29%
 # hash-table stats:
  
-# Load=25/8192=0%, Rehash=0, Collisions=1/35=3%
-# Finished Make data base on Wed Jun  8 10:22:24 2022
+# Load=26/8192=0%, Rehash=0, Collisions=1/37=3%
+# Finished Make data base on Thu Jun  9 10:52:40 2022
 
  
