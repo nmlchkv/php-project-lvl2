@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun  9 10:52:40 2022
+# Make data base, printed on Mon Jun 20 12:10:34 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ PATH = /root/.vscode-server/bin/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/bin/rem
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-7caeea7b-4791-43d0-a60f-5efc5831e323.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0e642c12-dd23-4e9b-995b-bb037e8ed0d1.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -69,7 +69,7 @@ HOME = /root
 # environment
 LOGNAME = root
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -132,7 +132,6 @@ SUFFIXES :=
 LANG = C
 # environment
 TERM = xterm-256color
- 
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
@@ -186,6 +185,7 @@ validate:
 
 test:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 14):
@@ -239,8 +239,7 @@ install:
 
 # strcache performance: lookups = 37 / hit rate = 29%
 # hash-table stats:
- 
 # Load=26/8192=0%, Rehash=0, Collisions=1/37=3%
-# Finished Make data base on Thu Jun  9 10:52:40 2022
+# Finished Make data base on Mon Jun 20 12:10:34 2022
 
  
