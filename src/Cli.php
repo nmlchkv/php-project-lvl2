@@ -4,7 +4,7 @@ namespace Src\Cli;
 
 use Docopt;
 
-use function Src\Differ\genDiff;
+use function Differ\Differ\genDiff;
 
 function start(): string
 {
