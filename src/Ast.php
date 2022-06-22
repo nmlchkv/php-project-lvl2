@@ -26,7 +26,7 @@ function ast(array $firstContentFromFile, array $secondContentFromFile): array
  * @param mixed $secondValue
  * @return array<mixed>
  */
-function getAstNode(string $type, string $key, mixed $value, mixed $secondValue = null): array
+function getAstNode(string $type, string $key, $value, $secondValue = null): array
 {
     return ['type' => $type,
         'key' => $key,
@@ -67,7 +67,7 @@ function getAst(string $key, array $firstContentFromFile, array $secondContentFr
  * @param mixed $content
  * @return mixed
  */
-function normalizeContent(mixed $content)
+function normalizeContent($content)
 {
     $iter = function ($content) use (&$iter) {
         if (!is_array($content)) {

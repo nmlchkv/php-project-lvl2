@@ -108,7 +108,7 @@ function getIndent(): string
  * @param int $depth
  * @return string
  */
-function normalizeValue(mixed $node, int $depth): string
+function normalizeValue($node, int $depth): string
 {
      return (is_array($node)) ?
          getFormatStylish($node, $depth + 1) :
@@ -119,7 +119,7 @@ function normalizeValue(mixed $node, int $depth): string
  * @param mixed $contents
  * @return mixed
  */
-function normalizeBooleanAndNull(mixed $contents): mixed
+function normalizeBooleanAndNull($contents)
 {
     if (is_null($contents)) {
         return "null";

@@ -55,7 +55,7 @@ function buildBody(array $ast, string $parent = ''): string
  * @param mixed $value
  * @return mixed
  */
-function getPlainValue(mixed $value): mixed
+function getPlainValue($value)
 {
     if (is_int($value)) {
         return  (string) $value;
