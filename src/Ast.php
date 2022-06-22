@@ -65,9 +65,9 @@ function getAst(string $key, array $firstContentFromFile, array $secondContentFr
 
 /**
  * @param mixed $content
- * @return array<mixed>
+ * @return mixed
  */
-function normalizeContent(mixed $content): array
+function normalizeContent(mixed $content): mixed
 {
     $iter = function ($content) use (&$iter) {
         if (!is_array($content)) {
