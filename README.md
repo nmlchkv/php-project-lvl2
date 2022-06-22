@@ -9,10 +9,6 @@
  * start help: make gendiff
 
  
-example flatten json
-[![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
-example flatten yaml
-[![yaml](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ.svg)](https://asciinema.org/a/o4hfspGETIQjUDn6YG7vjGYnZ)
 example recursive file .json
 [![recursiveJson](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG.svg)](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG)
 example recursive file .yaml
