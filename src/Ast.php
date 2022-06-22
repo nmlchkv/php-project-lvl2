@@ -26,7 +26,7 @@ function ast(array $firstContentFromFile, array $secondContentFromFile): array
  * @param mixed $secondValue
  * @return array<mixed>
  */
-function getAstNode(string $type, string $key, $value, $secondValue = null): array
+function getAstNode(string $type, string $key, mixed $value, mixed $secondValue = null): array
 {
     return ['type' => $type,
         'key' => $key,
@@ -107,7 +107,7 @@ function getKey(array $node): string
  * @param array<mixed> $node
  * @return mixed
  */
-function getValue(array $node): void
+function getValue(array $node): mixed
 {
     return $node['value'];
 }
@@ -116,7 +116,7 @@ function getValue(array $node): void
  * @param array<mixed> $node
  * @return mixed
  */
-function getSecondValue(array $node): void
+function getSecondValue(array $node): mixed
 {
     return $node['secondValue'];
 }
