@@ -17,7 +17,7 @@ class GenDiffTest extends TestCase
      * @param string $result
      * @return void
      */
-    public function testGendiff($file1, $file2, $format, $result)
+    public function testGendiff(string $file1, string $file2, string $format, $result): void
     {
         $fixture1 = $this->getFullPathToFile($file1);
         $fixture2 = $this->getFullPathToFile($file2);
