@@ -23,8 +23,6 @@ jobs:
         
       - name: Run linter 
         run: make lint
-      - name: Run linter-fix
-        run: make lint-fix
 
       - name: Run test & publish code coverage
         uses: paambaati/codeclimate-action@v2.6.0

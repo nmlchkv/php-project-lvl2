@@ -4,10 +4,6 @@
                 "bin/gendiff"
         ],
         "autoload": {
-                    "psr-4": {
-            "Hexlet\\Code\\": "src",
-            "Hexlet\\Code\\Tests\\": "tests"
-        },
         "files": [
             "src/Cli.php",
             "src/Differ.php",

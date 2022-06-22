@@ -4,9 +4,10 @@
 <a href="https://codeclimate.com/github/itaopro/php-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4d8fc888d8438a2835d5/test_coverage" /></a>
 [![PHP CI](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml/badge.svg)](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml)
 # Difference calculator install:
- - git clone git@github.com:itaopro/php-project-lvl1.git
- - make install
- - start help: make gendiff
+ * git clone git@github.com:itaopro/php-project-lvl2.git
+ * cd php-project-lvl2
+ * make install
+ * start help: make gendiff
  
 example flatten json
 [![json](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
