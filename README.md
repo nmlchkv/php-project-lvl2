@@ -9,9 +9,8 @@
  * cd php-ptoject-lvl2
  * start help: make gendiff
 
- 
-example recursive file .json
-[![recursiveJson](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG.svg)](https://asciinema.org/a/QNC8OiV3uPjT8PRMerUsKmlwG)
+example flatten file .json
+[![flattenJson](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
 example recursive file .yaml
 [![yamlRecursive](https://asciinema.org/a/TXNOqDptDt3o5ExmJgnvjExaS.svg)](https://asciinema.org/a/TXNOqDptDt3o5ExmJgnvjExaS)
 example format plain file .json
