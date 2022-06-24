@@ -6,6 +6,7 @@
 # Difference calculator install:
  * git clone git@github.com:itaopro/php-project-lvl2.git
  * make install
+ * cd php-ptoject-lvl2
  * start help: make gendiff
 
  
