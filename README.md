@@ -13,13 +13,10 @@ example flatten file .json
 [![flattenJson](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1.svg)](https://asciinema.org/a/MgnGRyUDuZKbO9njhfNBPE9o1)
 example recursive file .yaml
 [![yamlRecursive](https://asciinema.org/a/TXNOqDptDt3o5ExmJgnvjExaS.svg)](https://asciinema.org/a/TXNOqDptDt3o5ExmJgnvjExaS)
-example format plain file .json
-[![formatPlainJson](https://asciinema.org/a/9OE48YwYg41SB6LAWCvhoIF8c.svg)](https://asciinema.org/a/9OE48YwYg41SB6LAWCvhoIF8c)
 example format plain file .yaml
 [![formatPlainYaml](https://asciinema.org/a/cTJLSzBSfuMeH218HVaMM1eZI.svg)](https://asciinema.org/a/cTJLSzBSfuMeH218HVaMM1eZI)
 example format json file .json
 [![formatJson](https://asciinema.org/a/GFJpzxElURN2q3wgXPaabB5lh.svg)](https://asciinema.org/a/GFJpzxElURN2q3wgXPaabB5lh)
-example format json file .yaml
-[![formatYaml](https://asciinema.org/a/zpxjD9oYiR60lyyPaDquFLk55.svg)](https://asciinema.org/a/zpxjD9oYiR60lyyPaDquFLk55)
+
 
 
