@@ -24,7 +24,7 @@ function genDiff(string $firstPath, string $secondPath, string $format = 'stylis
 }
 
  /**
-  * @param string $path
+  * @param string $content
   * @return array<string>
   */
 
