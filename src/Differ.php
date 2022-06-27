@@ -6,7 +6,7 @@ use Exception;
 
 use function Src\Parsers\parse;
 use function Src\Formatters\format;
-use function Src\Ast\getAst;
+use function Src\Ast\buildAst;
 
 /**
  * @param string $firstPath
@@ -17,38 +17,26 @@ use function Src\Ast\getAst;
 
 function genDiff(string $firstPath, string $secondPath, string $format = 'stylish'): string
 {
-    $firstContent = parsePath($firstPath);
-    $secondContent = parsePath($secondPath);
-    $ast = getAst($firstContent, $secondContent);
+    $firstContent = getContent($firstPath);
+    $secondContent = getContent($secondPath);
+    $ast = buildAst($firstContent, $secondContent);
     return format($ast, $format);
 }
 
  /**
   * @param string $path
-  * @return array<string>
+  * @return array
   */
 
-function parsePath($path): array
+function getContent(string $content): array
 {
-    $content = getContent($path);
-    $fileType = pathinfo(getPath($path), PATHINFO_EXTENSION);
-    return parse($fileType, $content);
-}
-
- /**
-  * @param string $path
-  * @return string
-  */
-
-function getContent(string $path): string
-{
-    $filePath = getPath($path);
-    $fileContent = file_get_contents($filePath);
-    if ($fileContent === false) {
-        throw new Exception("Cant read file");
-    } else {
-        return $fileContent;
+    $path = getPath($content);
+    $contents = file_get_contents($path);
+    if ($contents === false) {
+        throw new Exception("Can't read file");
     }
+    
+    return parse($type, $contents);
 }
 
 /**
