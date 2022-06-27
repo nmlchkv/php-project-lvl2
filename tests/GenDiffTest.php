@@ -14,7 +14,7 @@ class GenDiffTest extends TestCase
      * @param string $file1
      * @param string $file2
      * @param string $format
-     * @param string $result
+     * @param string $expected
      * @return void
      */
 
