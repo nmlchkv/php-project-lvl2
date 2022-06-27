@@ -32,6 +32,7 @@ function getContent(string $content): array
 {
     $path = getPath($content);
     $contents = file_get_contents($path);
+    $type = pathinfo($path, PATHINFO_EXTENSION);
     if ($contents === false) {
         throw new Exception("Can't read file");
     }
