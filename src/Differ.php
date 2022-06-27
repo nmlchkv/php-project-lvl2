@@ -17,26 +17,38 @@ use function Src\Ast\ast;
 
 function genDiff(string $firstPath, string $secondPath, string $format = 'stylish'): string
 {
-    $firstContent = getContent($firstPath);
-    $secondContent = getContent($secondPath);
+    $firstContent = parsePath($firstPath);
+    $secondContent = parsePath($secondPath);
     $ast = ast($firstContent, $secondContent);
     return format($ast, $format);
 }
 
-/**
- * @param string $path
- * @return array<string>
- */
+ /**
+  * @param string $path
+  * @return array<string>
+  */
 
-function getContent(string $path): array
+function parsePath($path): array
+{
+    $content = getContent($path);
+    $fileType = pathinfo(getPath($path), PATHINFO_EXTENSION);
+    return parse($fileType, $content);
+}
+
+ /**
+  * @param string $path
+  * @return string
+  */
+
+function getContent(string $path): string
 {
     $filePath = getPath($path);
     $fileContent = file_get_contents($filePath);
     if ($fileContent === false) {
         throw new Exception("Cant read file");
+    } else {
+        return $fileContent;
     }
-    $fileType = pathinfo($filePath, PATHINFO_EXTENSION);
-    return parse($fileType, $fileContent);
 }
 
 /**
