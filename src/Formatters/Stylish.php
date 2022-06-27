@@ -22,6 +22,7 @@ const END = "}";
  * @param array<mixed> $ast
  * @return string
  */
+
 function format(array $ast): string
 {
     $depth = 0;
@@ -33,6 +34,7 @@ function format(array $ast): string
  * @param int $depth
  * @return string
  */
+
 function getFormatStylish(array $ast, int $depth = 0): string
 {
     return START . buildBody($ast, $depth) . str_repeat(getIndent(), $depth) . END;
@@ -43,6 +45,7 @@ function getFormatStylish(array $ast, int $depth = 0): string
  * @param int $depth
  * @return string
  */
+
 function buildBody(array $ast, int $depth): string
 {
     $result = array_map(function ($node) use ($depth) {
@@ -72,6 +75,7 @@ function buildBody(array $ast, int $depth): string
  * @param int $depth
  * @return string
  */
+
 function getAddedIndent(int $depth): string
 {
     return str_repeat(getIndent(), $depth) . SPACE . SPACE . ADDED_SYMBOL . SPACE;
@@ -81,6 +85,7 @@ function getAddedIndent(int $depth): string
  * @param int $depth
  * @return string
  */
+
 function getDeletedIndent(int $depth): string
 {
     return str_repeat(getIndent(), $depth) . SPACE . SPACE . DELETED_SYMBOL . SPACE;
@@ -90,6 +95,7 @@ function getDeletedIndent(int $depth): string
  * @param int $depth
  * @return string
  */
+
 function getUnchangedIndent(int $depth): string
 {
     return str_repeat(getIndent(), $depth) . getIndent();
@@ -98,6 +104,7 @@ function getUnchangedIndent(int $depth): string
 /**
  * @return string
  */
+
 function getIndent(): string
 {
     return str_repeat(SPACE, 4);
@@ -108,6 +115,7 @@ function getIndent(): string
  * @param int $depth
  * @return string
  */
+
 function normalizeValue($node, int $depth): string
 {
      return (is_array($node)) ?
@@ -119,6 +127,7 @@ function normalizeValue($node, int $depth): string
  * @param mixed $contents
  * @return mixed
  */
+
 function normalizeBooleanAndNull($contents)
 {
     if (is_null($contents)) {

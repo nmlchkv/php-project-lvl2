@@ -14,6 +14,7 @@ use function Src\Ast\getSecondValue;
  * @param array<mixed> $ast
  * @return string
  */
+
 function format(array $ast): string
 {
     return buildBody($ast);
@@ -24,6 +25,7 @@ function format(array $ast): string
  * @param string $parent
  * @return string
  */
+
 function buildBody(array $ast, string $parent = ''): string
 {
     $result = array_map(function ($node) use ($parent) {
@@ -55,6 +57,7 @@ function buildBody(array $ast, string $parent = ''): string
  * @param mixed $value
  * @return mixed
  */
+
 function getPlainValue($value)
 {
     if (is_int($value)) {

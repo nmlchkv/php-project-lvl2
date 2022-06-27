@@ -10,6 +10,7 @@ use function Functional\sort;
  * @param array<mixed> $secondContentFromFile
  * @return array<mixed>
  */
+
 function ast(array $firstContentFromFile, array $secondContentFromFile): array
 {
     $keys = array_merge(array_keys($firstContentFromFile), array_keys($secondContentFromFile));
@@ -26,6 +27,7 @@ function ast(array $firstContentFromFile, array $secondContentFromFile): array
  * @param mixed $secondValue
  * @return array<mixed>
  */
+
 function getAstNode(string $type, string $key, $value, $secondValue = null): array
 {
     return ['type' => $type,
@@ -40,6 +42,7 @@ function getAstNode(string $type, string $key, $value, $secondValue = null): arr
  * @param array<mixed> $secondContentFromFile
  * @return array<mixed>
  */
+
 function getAst(string $key, array $firstContentFromFile, array $secondContentFromFile): array
 {
     $firstContent = $firstContentFromFile[$key] ?? null;
@@ -67,6 +70,7 @@ function getAst(string $key, array $firstContentFromFile, array $secondContentFr
  * @param mixed $content
  * @return mixed
  */
+
 function normalizeContent($content)
 {
     $iter = function ($content) use (&$iter) {
@@ -89,6 +93,7 @@ function normalizeContent($content)
  * @param array<mixed> $node
  * @return string
  */
+
 function getType(array $node): string
 {
     return $node['type'];
@@ -98,6 +103,7 @@ function getType(array $node): string
  * @param array<mixed> $node
  * @return string
  */
+
 function getKey(array $node): string
 {
     return $node['key'];
@@ -107,6 +113,7 @@ function getKey(array $node): string
  * @param array<mixed> $node
  * @return mixed
  */
+
 function getValue(array $node)
 {
     return $node['value'];
@@ -116,6 +123,7 @@ function getValue(array $node)
  * @param array<mixed> $node
  * @return mixed
  */
+
 function getSecondValue(array $node)
 {
     return $node['secondValue'];
@@ -125,6 +133,7 @@ function getSecondValue(array $node)
  * @param array<mixed> $node
  * @return array<mixed>
  */
+
 function getChildren(array $node): array
 {
     return $node['value'];
@@ -134,6 +143,7 @@ function getChildren(array $node): array
  * @param array<mixed> $node
  * @return bool
  */
+
 function hasChildren(array $node): bool
 {
     return array_key_exists('children', $node);

@@ -24,7 +24,7 @@ class GenDiffTest extends TestCase
         $expectedDiff = $this->getFullPathToFile($result);
         $this->assertStringEqualsFile($expectedDiff, genDiff($fixture1, $fixture2, $format));
     }
-    
+
     /**
      * @return array<int, array<int, string>>
      */

@@ -14,6 +14,7 @@ use function Src\Ast\ast;
  * @param string $format
  * @return string
  */
+
 function genDiff(string $firstFile, string $secondFile, string $format = 'stylish'): string
 {
     $firstContent = getContent($firstFile);
@@ -26,6 +27,7 @@ function genDiff(string $firstFile, string $secondFile, string $format = 'stylis
  * @param string $file
  * @return array<string>
  */
+
 function getContent(string $file): array
 {
     $filePath = getPath($file);
@@ -41,6 +43,7 @@ function getContent(string $file): array
  * @param string $file
  * @return string
  */
+
 function getPath(string $file): string
 {
     if (strpos($file, '/') === 0) {
