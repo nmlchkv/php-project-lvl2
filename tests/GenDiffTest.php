@@ -11,17 +11,17 @@ class GenDiffTest extends TestCase
         /**
      * @dataProvider diffDataProvider
      *
-     * @param string $file1
-     * @param string $file2
+     * @param string $path1
+     * @param string $path2
      * @param string $format
      * @param string $expected
      * @return void
      */
 
-    public function testGendiff(string $file1, string $file2, string $format, string $expected): void
+    public function testGendiff(string $path1, string $path2, string $format, string $expected): void
     {
-        $fixture1 = $this->getFullPathToFixture($file1);
-        $fixture2 = $this->getFullPathToFixture($file2);
+        $fixture1 = $this->getFullPathToFixture($path1);
+        $fixture2 = $this->getFullPathToFixture($path2);
         $expectedPath = $this->getFullPathToFixture($expected);
         $this->assertStringEqualsFile($expectedPath, genDiff($fixture1, $fixture2, $format));
     }

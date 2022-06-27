@@ -9,28 +9,28 @@ use function Src\Formatters\format;
 use function Src\Ast\ast;
 
 /**
- * @param string $firstFile
- * @param string $secondFile
+ * @param string $firstPath
+ * @param string $secondPath
  * @param string $format
  * @return string
  */
 
-function genDiff(string $firstFile, string $secondFile, string $format = 'stylish'): string
+function genDiff(string $firstPath, string $secondPath, string $format = 'stylish'): string
 {
-    $firstContent = getContent($firstFile);
-    $secondContent = getContent($secondFile);
+    $firstContent = getContent($firstPath);
+    $secondContent = getContent($secondPath);
     $ast = ast($firstContent, $secondContent);
     return format($ast, $format);
 }
 
 /**
- * @param string $file
+ * @param string $path
  * @return array<string>
  */
 
-function getContent(string $file): array
+function getContent(string $path): array
 {
-    $filePath = getPath($file);
+    $filePath = getPath($path);
     $fileContent = file_get_contents($filePath);
     if ($fileContent === false) {
         throw new Exception("Cant read file");
@@ -40,14 +40,14 @@ function getContent(string $file): array
 }
 
 /**
- * @param string $file
+ * @param string $path
  * @return string
  */
 
-function getPath(string $file): string
+function getPath(string $path): string
 {
-    if (strpos($file, '/') === 0) {
-        return $file;
+    if (strpos($path, '/') === 0) {
+        return $path;
     }
-    return __DIR__ . '/../' . $file;
+    return __DIR__ . '/../' . $path;
 }
