@@ -35,7 +35,6 @@ function getContent(string $content): array
     if ($contents === false) {
         throw new Exception("Can't read file");
     }
-    
     return parse($type, $contents);
 }
 
