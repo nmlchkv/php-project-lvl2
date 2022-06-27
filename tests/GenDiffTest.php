@@ -22,8 +22,8 @@ class GenDiffTest extends TestCase
     {
         $fixture1 = $this->getFullPathToFixture($file1);
         $fixture2 = $this->getFullPathToFixture($file2);
-        $expectedDiff = $this->getFullPathToFixture($expected);
-        $this->assertStringEqualsFile($expectedDiff, genDiff($fixture1, $fixture2, $format));
+        $expectedPath = $this->getFullPathToFixture($expected);
+        $this->assertStringEqualsFile($expectedPath, genDiff($fixture1, $fixture2, $format));
     }
 
     /**
