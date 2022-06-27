@@ -6,18 +6,18 @@ use function Functional\map;
 use function Functional\sort;
 
 /**
- * @param array<mixed> $firstContentFromFile
- * @param array<mixed> $secondContentFromFile
+ * @param array<mixed> $firstContentFrom
+ * @param array<mixed> $secondContentFrom
  * @return array<mixed>
  */
 
-function ast(array $firstContentFromFile, array $secondContentFromFile): array
+function buildAst(array $firstContentFrom, array $secondContentFrom): array
 {
-    $keys = array_merge(array_keys($firstContentFromFile), array_keys($secondContentFromFile));
+    $keys = array_merge(array_keys($firstContentFrom), array_keys($secondContentFrom));
     $uniqueKeys = array_unique($keys);
     $sortedKeys = sort($uniqueKeys, fn ($a, $b) => strcmp($a, $b), false);
 
-    return array_map(fn($key) => getAst($key, $firstContentFromFile, $secondContentFromFile), $sortedKeys);
+    return array_map(fn($key) => getAst($key, $firstContentFrom, $secondContentFrom), $sortedKeys);
 }
 
 /**

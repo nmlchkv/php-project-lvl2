@@ -6,7 +6,7 @@ use Exception;
 
 use function Src\Parsers\parse;
 use function Src\Formatters\format;
-use function Src\Ast\ast;
+use function Src\Ast\getAst;
 
 /**
  * @param string $firstPath
@@ -19,7 +19,7 @@ function genDiff(string $firstPath, string $secondPath, string $format = 'stylis
 {
     $firstContent = parsePath($firstPath);
     $secondContent = parsePath($secondPath);
-    $ast = ast($firstContent, $secondContent);
+    $ast = getAst($firstContent, $secondContent);
     return format($ast, $format);
 }
 
