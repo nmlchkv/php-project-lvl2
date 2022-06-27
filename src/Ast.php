@@ -6,18 +6,18 @@ use function Functional\map;
 use function Functional\sort;
 
 /**
- * @param array<mixed> $firstContentFrom
- * @param array<mixed> $secondContentFrom
+ * @param array<mixed> $firstContent
+ * @param array<mixed> $secondContent
  * @return array<mixed>
  */
 
-function buildAst(array $firstContentFrom, array $secondContentFrom): array
+function BuildAst(array $firstContent, array $secondContent): array
 {
-    $keys = array_merge(array_keys($firstContentFrom), array_keys($secondContentFrom));
+    $keys = array_merge(array_keys($firstContent), array_keys($secondContent));
     $uniqueKeys = array_unique($keys);
     $sortedKeys = sort($uniqueKeys, fn ($a, $b) => strcmp($a, $b), false);
 
-    return array_map(fn($key) => getAst($key, $firstContentFrom, $secondContentFrom), $sortedKeys);
+    return array_map(fn($key) => getAst($key, $firstContent, $secondContent), $sortedKeys);
 }
 
 /**
@@ -38,32 +38,32 @@ function getAstNode(string $type, string $key, $value, $secondValue = null): arr
 
 /**
  * @param string $key
- * @param array<mixed> $firstContentFromFile
- * @param array<mixed> $secondContentFromFile
+ * @param array<mixed> $firstContent
+ * @param array<mixed> $secondContent
  * @return array<mixed>
  */
 
-function getAst(string $key, array $firstContentFromFile, array $secondContentFromFile): array
+function getAst(string $key, array $firstContent, array $secondContent): array
 {
-    $firstContent = $firstContentFromFile[$key] ?? null;
-    $secondContent = $secondContentFromFile[$key] ?? null;
-    if (is_array($firstContent) && is_array($secondContent)) {
-        return getAstNode('hasChildren', $key, ast($firstContent, $secondContent));
+    $firstValue = $firstContent[$key] ?? null;
+    $secondValue = $secondContent[$key] ?? null;
+    if (is_array($firstValue) && is_array($secondValue)) {
+        return getAstNode('hasChildren', $key, buildAst($firstValue, $secondValue));
     }
 
-    if (!array_key_exists($key, $firstContentFromFile)) {
-        return getAstNode('added', $key, normalizeContent($secondContent));
+    if (!array_key_exists($key, $firstContent)) {
+        return getAstNode('added', $key, normalizeContent($secondValue));
     }
 
-    if (!array_key_exists($key, $secondContentFromFile)) {
-        return  getAstNode('deleted', $key, normalizeContent($firstContent));
+    if (!array_key_exists($key, $secondContent)) {
+        return  getAstNode('deleted', $key, normalizeContent($firstValue));
     }
 
-    if ($firstContent !== $secondContent) {
-        return getAstNode('changed', $key, normalizeContent($firstContent), normalizeContent($secondContent));
+    if ($firstValue !== $secondValue) {
+        return getAstNode('changed', $key, normalizeContent($firstValue), normalizeContent($secondValue));
     }
 
-    return getAstNode('unchanged', $key, $firstContent);
+    return getAstNode('unchanged', $key, $firstValue);
 }
 
 /**
