@@ -26,7 +26,11 @@ class GenDiffTest extends TestCase
         $this->assertStringEqualsFile($expectedDiff, genDiff($fixture1, $fixture2, $format));
     }
 
-    public function diffDataProvider(): array
+    /**
+    * @param array<mixed>
+    */
+
+    public function diffDataProvider()
     {
         return [
             [
