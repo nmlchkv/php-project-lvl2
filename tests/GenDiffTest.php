@@ -24,6 +24,7 @@ class GenDiffTest extends TestCase
         $expectedDiff = $this->getFullPathToFile($result);
         $this->assertStringEqualsFile($expectedDiff, genDiff($fixture1, $fixture2, $format));
     }
+    
     /**
      * @return array<int, array<int, string>>
      */
@@ -68,7 +69,8 @@ class GenDiffTest extends TestCase
             ]
         ];
     }
-    private function getFullPathToFile(string $path): string
+
+    private function getFullPathToFixture(string $path): string
     {
         return __DIR__ . "/fixtures/" . $path;
     }
