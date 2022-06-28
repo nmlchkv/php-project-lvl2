@@ -11,7 +11,7 @@ use function Functional\sort;
  * @return array<mixed>
  */
 
-function BuildAst(array $firstContent, array $secondContent): array
+function buildAst(array $firstContent, array $secondContent): array
 {
     $keys = array_merge(array_keys($firstContent), array_keys($secondContent));
     $uniqueKeys = array_unique($keys);
