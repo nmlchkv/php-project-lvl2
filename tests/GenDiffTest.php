@@ -34,39 +34,21 @@ class GenDiffTest extends TestCase
     {
         return [
             [
-                "filepath1.json",
-                "filepath2.json",
-                "stylish",
-                "resultTrueStylish.txt"
+                'filepath1.json',
+                'filepath2.json',
+                'stylish',
+                'resultTrueStylish.txt'
             ],
             [
-                "filepath1.yaml",
-                "filepath2.yaml",
-                "stylish",
-                "resultTrueStylish.txt"
+                'filepath1.yaml',
+                'filepath2.yaml',
+                'plain',
+                'resultTruePlain.txt'
             ],
             [
-                "filepath1.json",
-                "filepath2.json",
-                "plain",
-                "resultTruePlain.txt"
-            ],
-            [
-                "filepath1.yaml",
-                "filepath2.yaml",
-                "plain",
-                "resultTruePlain.txt"
-            ],
-            [
-                "filepath1.json",
-                "filepath2.json",
-                "json",
-                "resultTrueJson.txt"
-            ],
-            [
-                "filepath1.yaml",
-                "filepath2.yaml",
-                "json",
+                'filepath1.json',
+                'filepath2.json',
+                'json',
                 "resultTrueJson.txt"
             ]
         ];

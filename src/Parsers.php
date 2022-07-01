@@ -14,10 +14,10 @@ use Symfony\Component\Yaml\Yaml;
 function parse(string $type, string $content): array
 {
     switch ($type) {
-        case "yml":
-        case "yaml":
+        case 'yml':
+        case 'yaml':
             return Yaml::parse($content);
-        case "json":
+        case 'json':
             return json_decode($content, true);
         default:
             throw new Exception('Use can only type: .json, .yaml .yml');

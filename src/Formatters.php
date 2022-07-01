@@ -15,11 +15,11 @@ use function Src\Formatters\Json\format as formatJson;
 function format(array $ast, string $format): string
 {
     switch ($format) {
-        case "stylish":
+        case 'stylish':
             return formatStylish($ast);
-        case "plain":
+        case 'plain':
             return formatPlain($ast);
-        case "json":
+        case 'json':
             return formatJson($ast);
         default:
             throw new \Exception('Unknown format: ' . $format);

@@ -30,10 +30,12 @@ function buildAst(array $firstContent, array $secondContent): array
 
 function getAstNode(string $type, string $key, $value, $secondValue = null): array
 {
-    return ['type' => $type,
+    return [
+        'type' => $type,
         'key' => $key,
         'value' => $value,
-        'secondValue' => $secondValue];
+        'secondValue' => $secondValue,
+    ];
 }
 
 /**
@@ -82,7 +84,11 @@ function normalizeContent($content)
         return map($keys, function ($key) use ($content, $iter) {
             $value = (is_array($content[$key])) ? $iter($content[$key]) : $content[$key];
 
-            return ['type' => 'unchanged', 'key' => $key, 'value' => $value];
+            return [
+                'type' => 'unchanged',
+                'key' => $key,
+                'value' => $value
+            ];
         });
     };
 

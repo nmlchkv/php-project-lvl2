@@ -31,22 +31,22 @@ function buildBody(array $ast, string $parent = ''): string
     $result = array_map(function ($node) use ($parent) {
         $key = ($parent !== '') ? $parent . "." . getKey($node) :  $parent . getKey($node);
         switch (getType($node)) {
-            case "hasChildren":
-                $newParent = ($parent !== '') ? $parent . "." . getKey($node) :  $parent . getKey($node);
+            case 'hasChildren':
+                $newParent = ($parent !== '') ? $parent . '.' . getKey($node) :  $parent . getKey($node);
                 return buildBody(getChildren($node), $newParent);
-            case "added":
+            case 'added':
                 $value = getPlainValue(getValue($node));
                 return "Property '{$key}' was added with value: {$value}";
-            case "deleted":
+            case 'deleted':
                 return "Property '{$key}' was removed";
-            case "changed":
+            case 'changed':
                 $firstValue = getPlainValue(getValue($node));
                 $secondValue = getPlainValue(getSecondValue($node));
                 return "Property '{$key}' was updated. From {$firstValue} to {$secondValue}";
-            case "unchanged":
+            case 'unchanged':
                 break;
             default:
-                throw new Exception("Not support key" . getType($node));
+                throw new Exception('Not support key' . getType($node));
         }
     }, $ast);
     $filteredResult = array_filter($result);
@@ -65,15 +65,15 @@ function getPlainValue($value)
     }
 
     if (is_array($value)) {
-        return "[complex value]";
+        return '[complex value]';
     }
 
     if (is_null($value)) {
-        return "null";
+        return 'null';
     }
 
     if (is_bool($value)) {
-        return ($value === true) ? "true" : "false";
+        return ($value === true) ? 'true' : 'false';
     }
 
     return  "'" . $value . "'";
