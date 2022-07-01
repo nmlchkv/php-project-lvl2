@@ -34,8 +34,11 @@
         "squizlabs/php_codesniffer": "3.*",
         "phpstan/phpstan": "^1.1"
         }
-            "config": {
+    "config": {
         "allow-plugins": {
-            false
+            "third-party/required-plugin": false,
+            "my-organization/*": false,
+            "unnecessary/plugin": false
+        }
     }
 }
