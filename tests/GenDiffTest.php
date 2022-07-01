@@ -34,6 +34,12 @@ class GenDiffTest extends TestCase
     {
         return [
             [
+                'file1.json',
+                'file2.json',
+                'stylish',
+                'resultTrueFlatten.txt'
+            ],
+            [
                 'filepath1.json',
                 'filepath2.json',
                 'stylish',
