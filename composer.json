@@ -36,9 +36,7 @@
         },
     "config": {
         "allow-plugins": {
-            "third-party/required-plugin": false,
-            "my-organization/*": false,
-            "unnecessary/plugin": false
+            "phpstan/extension-installer": true
         }
     }
 }
