@@ -131,11 +131,11 @@ function normalizeValue($node, int $depth): string
 function normalizeBooleanAndNull($contents)
 {
     if (is_null($contents)) {
-        return "null";
+        return 'null';
     }
 
     if (is_bool($contents)) {
-        return ($contents === true) ? "true" : "false";
+        return ($contents === true) ? 'true' : 'false';
     }
     return $contents;
 }
