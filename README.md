@@ -1,4 +1,4 @@
-
+[![hexlet-check](https://github.com/itaopro/php-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/itaopro/php-project-lvl2/actions/workflows/hexlet-check.yml)
 <a href="https://codeclimate.com/github/itaopro/php-project-lvl2/maintainability"><img src="https://api.codeclimate.com/v1/badges/4d8fc888d8438a2835d5/maintainability" /></a>
 <a href="https://codeclimate.com/github/itaopro/php-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4d8fc888d8438a2835d5/test_coverage" /></a>
 [![PHP CI](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml/badge.svg)](https://github.com/itaopro/php-project-lvl2/actions/workflows/main.yml)
